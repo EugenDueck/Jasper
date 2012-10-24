@@ -1210,6 +1210,7 @@ class Code_tableswitch extends Code {
     -----------------------------------------------------------------------*/
    void getLabel(Code_Collection code) {
       for (int i = 0; i < count; i++) code.setLabel(pc+branch[i]);
+      code.setLabel(pc+tableDefault);
    }
 
    /*-----------------------------------------------------------------------

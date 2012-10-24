@@ -2,7 +2,7 @@
  > File:        jasper/Jasper.java
  > Purpose:     Write Jasmin and browser files from input java class files
  > Author:      Chris Rathman, 12 June 1999
- > Version:     1.00
+ > Version:     1.0.1
  */
 package jasper;
 import java.io.*;
@@ -14,7 +14,7 @@ import java.util.zip.*;
  = Desc:          program to write Jasmin & Browse files                =
  =======================================================================*/
 public class Jasper {
-   public static final String version = "v1.00";  // jasper software version number
+   public static final String version = "v1.0.1";  // jasper software version number
 
    /*-----------------------------------------------------------------------
     - Method:        main                                                  -
