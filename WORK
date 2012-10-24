@@ -1,0 +1,34 @@
+Working To Do List:
+------------------
+
+1).  Simplify the main function.  The parsing of the class files from the
+     browse strings (for the recurse) got a bit unwieldy.  I intend to
+     break up the code into seperate functions.
+
+2).  Output the browse strings to an ASCII file or a database tables.
+     Currently the function just echos the results out to the output
+     screen and does not use the data any further.
+
+3).  Produce Eiffel type flat file output:  Eiffel has a flat utility
+     that shows the class with the inheritance hierarchy collapsed.  I
+     want to get a similar sort of function for the Java files where
+     the results display all the functions and constants of a file
+     that are declared locally as well as those received through
+     inheritance and interfaces.
+
+4).  Build a class browser:  Based on the results of reading in all
+     the classes inherited or referenced, it should be possible to build
+     a graphical browser using AWT to do smalltalk style browsing.  The
+     views could
+
+         - a simple inheritance hierarchy showing subclass/superclass
+           relationships
+         - interface hierarchy showing the effects of the multiple
+           inheritance of interfaces
+         - cross-reference dictionary to view all the classes which
+           refer to a specified class
+         - implementers of browser that shows the methods which implement
+           a specified function name
+
+
+

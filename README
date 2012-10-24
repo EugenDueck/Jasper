@@ -1,0 +1,94 @@
+Jasper README file                         10 August 2000, Chris Rathman
+
+Description
+-----------
+Welcome to Jasper version 1.00.
+
+Jasper is a program to read Java class files in binary byte code format.
+The program is capable of generating ASCII files which can be used in
+conjunction with the Jasmin Assembler described below.  Jasper is also
+intended to generate input into a class file browser that can produce the
+inheritance hierarchy and composition maps from the java class files.
+
+Requirements
+------------
+Jasper is written in Java, so it requires a Java Virtual Machine and Java
+run time library.  All testing was done on JDK1.2, but I am not aware of
+any issues that should prevent running the program on earlier versions or
+on various platforms.
+
+Installation Instructions
+-------------------------
+Jasper as a package set of classes: (package jasper;).  Two options are
+available to get the Java executable to recognize the Jasper package commands:
+
+   a). Include the 'jasper.jar' file in classpath environment variable:  The
+       necessary classes to run jasper have been bundled in the jasper.jar
+       file, so that if the file is included within the classpath, the Java
+       program will recognize the proper calls into Jasper.
+
+   b). Create a 'jasper' directory at a place that is identified within the
+       classpath.  If the individual class files are placed within the jasper
+       directory, the JVM should correctly identify the jasper classes.
+
+Files
+-----
+The following files are included in this distribution:
+
+    jasper/README       - this file
+    jasper/COPYING      - jasper licensing terms
+    jasper/WORK         - my "to do" list
+    jasper/*.java       - java source files for Jasper
+    jasper/*.class      - compiled java class files for Jasper
+    jasper/Jasper.mf    - manifest file for the jar file
+    jasper/Jasper.jar   - java jar file to contain the jasper classes
+
+Running Jasper
+--------------
+Syntax:  To run jasper from the jar file:
+
+            java -jar Jasper.jar [jasper-options] files.class
+
+         To run jasper from the extracted class files:
+
+            java [java-options] jasper/Jasper [jasper-options] files.class
+
+   See your Java documentation for a list of the possible options associated
+   running the Java Virtual Machine.  Jasper does not require any specific
+   options in the normal course of running the the program.
+
+   Jasper recognizes the following options:
+
+         --jasmin   Disable jasmin file output");
+         -jasmin    Enable jasmin file output (default)");
+         -browse    Enable output to the browse files");
+         -recurse   Recurse through the inheritance and composition for the class");
+         -help      View Jasper help");
+         -version   View Jasper version number");
+         --version  View Jasper license");
+
+Problems/Questions
+------------------
+If you have a problem with Jasper, please e-mail me at: ChrisRath@aol.com
+
+Copyright
+---------
+Jasper is Copyright (1999) Chris Rathman, under the terms of
+a BSD style License.  See COPYING for more details.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Jasmin Reference
+----------------
+Jasmin was written as the companion to the book "Java Virtual Machine",
+published by O'Reilly, written by Jon Meyer & Troy Downing.
+(See http://www.ora.com/catalog/javavm/).
+
+Jasmin is Copyright (1997) Jonathan Meyer, under the terms of
+the GNU General Public License.
+
+Although Jasper is capable of producing Jasmin style files, there is no
+no code shared between the software.  If you have any intentions of using
+the Jasmin style output from Jasper, then you are encouraged to see the
+Jasmin resources for details concerning the language.
